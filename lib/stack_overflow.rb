@@ -8,8 +8,14 @@ class StackOverflow
     @@API_KEY = value
   end
 
-  def self.get_flair(user_id)
-    get("http://stackoverflow.com/users/flair/#{user_id}.json?key=#{@@API_KEY}")
+  def self.get_user(user_id)
+    result = get("http://api.stackoverflow.com/1.0/users/#{user_id}?key=#{@@API_KEY}")
+    result["users"].first
   end
   
+  def self.get_users(user_ids)
+    user_id = user_ids.join(";").to_s
+    result = get("http://api.stackoverflow.com/1.0/users/#{user_id}?key=#{@@API_KEY}")
+    result["users"]  
+  end
 end

@@ -4,6 +4,8 @@ This is a simple gem that utilizes HTTParty and the StackOverflow API.
 
 	gem install stack_overflow
 
+The StackOverflow API help can be found at http://api.stackoverflow.com/1.0/help
+
 == Set API Key
 
 Be sure to set the API Key.
@@ -12,9 +14,15 @@ Be sure to set the API Key.
 	
 You can get your key from StackOverflow by going here : http://stackapps.com/apps/register
 
-== Get Flair
+== Get User(s)
 
-	StackOverflow.get_flair(#user_id)
+API documentation can be found at	http://api.stackoverflow.com/1.0/help/method?method=users/{id}
+	
+	StackOverflow.get_user(#user_id)
+	
+You can also get a group of users by using
+
+	StackOverflow.get_users([#user_id1, #user_id2, etc])
 
 == Work in progress
 
