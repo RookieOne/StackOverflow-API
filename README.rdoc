@@ -1,4 +1,21 @@
-= Stackoverflow
+= Stack Overflow
 
-This is a simple gem that utilizes HTTParty and the Stackoverflow API.
+This is a simple gem that utilizes HTTParty and the StackOverflow API.
 
+	gem install stack_overflow
+
+== Set API Key
+
+Be sure to set the API Key.
+
+	StackOverflow.API_KEY = YOUR_KEY_GOES_HERE
+	
+You can get your key from StackOverflow by going here : http://stackapps.com/apps/register
+
+== Get Flair
+
+	StackOverflow.get_flair(#user_id)
+
+== Work in progress
+
+This is a work in progress as I use the API for my application.
