@@ -24,6 +24,12 @@ You can also get a group of users by using
 
 	StackOverflow.get_users([#user_id1, #user_id2, etc])
 
+== Get User's Tags
+
+API documentation can be found at http://api.stackoverflow.com/1.0/help/method?method=users/{id}/tags
+
+	StackOverflow.get_user_tags(#user_id)
+
 == Work in progress
 
 This is a work in progress as I use the API for my application.

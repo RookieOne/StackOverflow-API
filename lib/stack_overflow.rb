@@ -18,4 +18,8 @@ class StackOverflow
     result = get("http://api.stackoverflow.com/1.0/users/#{user_id}?key=#{@@API_KEY}")
     result["users"]  
   end
+  
+  def self.get_user_tags(user_id)
+    get("http://api.stackoverflow.com/1.0/users/#{user_id}/tags?key=#{@@API_KEY}")
+  end
 end

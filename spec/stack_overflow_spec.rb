@@ -13,7 +13,7 @@ describe StackOverflow do
     it { @user["display_name"].should == "JB"}
   end
   
-  describe "get user2" do
+  describe "get users" do
     before(:each) do
       @users = StackOverflow.get_users([60336, 3381])
     end
@@ -22,5 +22,11 @@ describe StackOverflow do
     it { @users.select{|u| u["display_name"] == "Ben Scheirman"}.should_not be_nil }
   end
   
-  
+  describe "get user tags" do
+    before(:each) do
+      @tags = StackOverflow.get_user_tags(60336)
+    end
+    it { @tags.should_not be_nil }
+    it { @tags["tags"].count.should > 0 }
+  end
 end
