@@ -4,7 +4,7 @@ This is a simple gem that utilizes HTTParty and the StackOverflow API.
 
 	gem install stack_overflow
 
-The StackOverflow API help can be found at http://api.stackoverflow.com/1.0/help
+The StackOverflow API help can be found at http://api.stackoverflow.com/1.1/usage
 
 == Set API Key
 
@@ -16,7 +16,7 @@ You can get your key from StackOverflow by going here : http://stackapps.com/app
 
 == Get User(s)
 
-API documentation can be found at	http://api.stackoverflow.com/1.0/help/method?method=users/{id}
+API documentation can be found at	http://api.stackoverflow.com/1.1/usage/methods/users-by-ids
 	
 	StackOverflow.get_user(#user_id)
 	
@@ -26,9 +26,21 @@ You can also get a group of users by using
 
 == Get User's Tags
 
-API documentation can be found at http://api.stackoverflow.com/1.0/help/method?method=users/{id}/tags
+API documentation can be found at http://api.stackoverflow.com/1.1/usage/methods/user-tags
 
 	StackOverflow.get_user_tags(#user_id)
+
+== Get Tags
+
+API documentation can be found at http://api.stackoverflow.com/1.1/usage/methods/tags
+
+  StackOverflow.get_tags
+
+== Get Tags Synonyms
+
+API documentation can be found at http://api.stackoverflow.com/1.1/usage/methods/tag-synonyms
+
+  StackOverflow.get_tags_synonyms
 
 == Work in progress
 
