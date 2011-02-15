@@ -29,4 +29,12 @@ describe StackOverflow do
     it { @tags.should_not be_nil }
     it { @tags["tags"].count.should > 0 }
   end
+
+  describe "get tags" do
+    before(:each) do
+      @tags = StackOverflow.get_tags
+    end
+    it { @tags.should_not be_nil }
+    it { @tags["tags"].count.should > 0 }
+  end
 end
