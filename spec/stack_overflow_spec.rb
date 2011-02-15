@@ -37,4 +37,13 @@ describe StackOverflow do
     it { @tags.should_not be_nil }
     it { @tags["tags"].count.should > 0 }
   end
+
+  describe "get tags synonyms" do
+    before(:each) do
+      @tags_synonyms = StackOverflow.get_tags_synonyms
+    end
+    it { @tags_synonyms.should_not be_nil }
+    it { @tags_synonyms["tag_synonyms"].count.should > 0 }
+  end
+
 end

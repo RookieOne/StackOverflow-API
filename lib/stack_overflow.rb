@@ -28,4 +28,8 @@ class StackOverflow
     get(@@URL + "tags?key=#{@@API_KEY}")
   end
 
+  def self.get_tags_synonyms
+    get(@@URL + "tags/synonyms?key=#{@@API_KEY}")
+  end
+
 end
