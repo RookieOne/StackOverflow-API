@@ -19,6 +19,17 @@ class StackOverflow
     result = get(@@URL + "users/#{user_id}?key=#{@@API_KEY}")
     result["users"]  
   end
+
+  def self.get_user_questions(user_id)
+    result = get(@@URL + "users/#{user_id}/questions?key=#{@@API_KEY}") 
+    result["questions"]
+  end
+
+
+  def self.get_user_answers(user_id)
+    result = get(@@URL + "users/#{user_id}/answers?key=#{@@API_KEY}") 
+    result["answers"]
+  end
   
   def self.get_user_tags(user_id)
     get(@@URL + "users/#{user_id}/tags?key=#{@@API_KEY}")

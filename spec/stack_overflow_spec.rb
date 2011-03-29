@@ -46,4 +46,20 @@ describe StackOverflow do
     it { @tags_synonyms["tag_synonyms"].count.should > 0 }
   end
 
+  describe "get users answers" do
+    before(:each) do
+      @answers = StackOverflow.get_user_answers(363881)
+    end
+    it { @answers.should_not be_nil }
+    it { @answers.count.should > 0 }
+  end
+
+  describe "get users questions" do
+    before(:each) do
+      @questions = StackOverflow.get_user_questions(363881)
+    end
+    it { @questions.should_not be_nil }
+    it { @questions.count.should > 0 }
+  end
+
 end

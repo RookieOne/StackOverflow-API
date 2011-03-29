@@ -30,6 +30,18 @@ API documentation can be found at http://api.stackoverflow.com/1.1/usage/methods
 
 	StackOverflow.get_user_tags(#user_id)
 
+== Get User's Questions
+
+API documentation can be found at http://api.stackoverflow.com/1.1/usage/methods/questions
+
+	StackOverflow.get_user_questions(#user_id)
+
+== Get User's Answers
+
+API documentation can be found at http://api.stackoverflow.com/1.1/usage/methods/answers
+
+	StackOverflow.get_user_answers(#user_id)
+
 == Get Tags
 
 API documentation can be found at http://api.stackoverflow.com/1.1/usage/methods/tags
