@@ -14,6 +14,16 @@ Be sure to set the API Key.
 	
 You can get your key from StackOverflow by going here : http://stackapps.com/apps/register
 
+== Get all Users
+
+API documentation can be found at http://api.stackoverflow.com/1.1/usage/methods/users
+
+  StackOverflow.get_all_users
+
+By default the api returns the first page of users with 30 per page. This information can be read from the results. To get additional pages or change the pagesize (0-100) you can make call like:
+
+  StackOverflow.get_all_users(:page => 2, :per_page => 50)
+
 == Get User(s)
 
 API documentation can be found at	http://api.stackoverflow.com/1.1/usage/methods/users-by-ids

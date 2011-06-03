@@ -1,4 +1,5 @@
 require 'httparty'
+require 'json'
 
 class StackOverflow
   include HTTParty
@@ -7,6 +8,16 @@ class StackOverflow
 
   def self.API_KEY=(value)
     @@API_KEY = value
+  end
+
+  def self.get_all_users(options={})
+    key = @@API_KEY
+    page = options[:page] || 1
+    pagesize = options[:pagesize] || 30
+    url = URI.parse(@@URL + "users?key=#{key}&page=#{page}&pagesize=#{pagesize}")
+    response = Net::HTTP.get_response url
+    gz = Zlib::GzipReader.new(StringIO.new(response.body))
+    JSON.parse(gz.read)
   end
 
   def self.get_user(user_id)

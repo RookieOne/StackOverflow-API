@@ -4,6 +4,29 @@ describe StackOverflow do
   before(:each) do
     StackOverflow.API_KEY = ENV["SO_API_KEY"]
   end
+
+  describe "get all users" do
+    context "all users" do 
+      before(:each) do
+        @result = StackOverflow.get_all_users
+      end
+      it { @result.should_not be_nil }
+    end
+
+    context "second page" do
+      before(:each) do
+        @result = StackOverflow.get_all_users(:page => 2)
+      end
+      it { @result.should_not be_nil }
+    end
+
+    context "50 per page" do
+      before(:each) do
+        @result = StackOverflow.get_all_users(:pagesize => 50)
+      end
+      it { @result["users"].count.should == 50 }
+    end
+  end
   
   describe "get user" do
     before(:each) do

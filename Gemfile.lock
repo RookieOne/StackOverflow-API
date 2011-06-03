@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    stack_overflow (0.0.1)
+    stack_overflow (0.0.6)
 
 GEM
   remote: http://rubygems.org/
@@ -10,6 +10,7 @@ GEM
     diff-lcs (1.1.2)
     httparty (0.6.1)
       crack (= 0.1.8)
+    json (1.4.6)
     rspec (2.4.0)
       rspec-core (~> 2.4.0)
       rspec-expectations (~> 2.4.0)
@@ -24,5 +25,6 @@ PLATFORMS
 
 DEPENDENCIES
   httparty
+  json
   rspec
   stack_overflow!
