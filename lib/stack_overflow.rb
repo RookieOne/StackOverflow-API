@@ -22,6 +22,7 @@ class StackOverflow
 
   def self.get_user(user_id)
     result = get(@@URL + "users/#{user_id}?key=#{@@API_KEY}")
+    return nil if result["users"].nil?
     result["users"].first
   end
   

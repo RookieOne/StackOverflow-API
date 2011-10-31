@@ -29,11 +29,20 @@ describe StackOverflow do
   end
   
   describe "get user" do
-    before(:each) do
-      @user = StackOverflow.get_user(60336)
+    context "60336" do
+      before(:each) do
+        @user = StackOverflow.get_user(60336)
+      end
+      it { @user.should_not be_nil }
+      it { @user["display_name"].should == "JB."}
     end
-    it { @user.should_not be_nil }
-    it { @user["display_name"].should == "JB"}
+    
+    context "Jared314" do
+      before(:each) do
+        @user = StackOverflow.get_user("Jared314")
+      end
+      it { @user.should be_nil }      
+    end
   end
   
   describe "get users" do
