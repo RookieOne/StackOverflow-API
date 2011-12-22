@@ -1,6 +1,6 @@
 = Stack Overflow
 
-Ive namespaced this gem to API::StackOverflow so that I could use 'StackOverflow' for other namespacing purposes
+*Ive* *namespaced* *this* *gem* *to* API::StackOverflow *so* *that* *I* *could* *use* 'StackOverflow' *for* *other* *namespacing* *purposes*
 
 This is a simple gem that utilizes HTTParty and the StackOverflow API.
 
