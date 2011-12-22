@@ -1,5 +1,7 @@
 = Stack Overflow
 
+*Ive* *namespaced* *this* *gem* *to* API::StackOverflow *so* *that* *I* *could* *use* 'StackOverflow' *for* *other* *namespacing* *purposes*
+
 This is a simple gem that utilizes HTTParty and the StackOverflow API.
 
 	gem install stack_overflow
@@ -10,7 +12,7 @@ The StackOverflow API help can be found at http://api.stackoverflow.com/1.1/usag
 
 Be sure to set the API Key.
 
-	StackOverflow.API_KEY = YOUR_KEY_GOES_HERE
+	API::StackOverflow.API_KEY = YOUR_KEY_GOES_HERE
 	
 You can get your key from StackOverflow by going here : http://stackapps.com/apps/register
 
@@ -18,51 +20,51 @@ You can get your key from StackOverflow by going here : http://stackapps.com/app
 
 API documentation can be found at http://api.stackoverflow.com/1.1/usage/methods/users
 
-  StackOverflow.get_all_users
+  API::StackOverflow.get_all_users
 
 By default the api returns the first page of users with 30 per page. This information can be read from the results. To get additional pages or change the pagesize (0-100) you can make call like:
 
-  StackOverflow.get_all_users(:page => 2, :per_page => 50)
+  API::StackOverflow.get_all_users(:page => 2, :per_page => 50)
 
 == Get User(s)
 
 API documentation can be found at	http://api.stackoverflow.com/1.1/usage/methods/users-by-ids
 	
-	StackOverflow.get_user(#user_id)
+	API::StackOverflow.get_user(#user_id)
 	
 You can also get a group of users by using
 
-	StackOverflow.get_users([#user_id1, #user_id2, etc])
+	API::StackOverflow.get_users([#user_id1, #user_id2, etc])
 
 == Get User's Tags
 
 API documentation can be found at http://api.stackoverflow.com/1.1/usage/methods/user-tags
 
-	StackOverflow.get_user_tags(#user_id)
+	API::StackOverflow.get_user_tags(#user_id)
 
 == Get User's Questions
 
 API documentation can be found at http://api.stackoverflow.com/1.1/usage/methods/questions
 
-	StackOverflow.get_user_questions(#user_id)
+	API::StackOverflow.get_user_questions(#user_id)
 
 == Get User's Answers
 
 API documentation can be found at http://api.stackoverflow.com/1.1/usage/methods/answers
 
-	StackOverflow.get_user_answers(#user_id)
+	API::StackOverflow.get_user_answers(#user_id)
 
 == Get Tags
 
 API documentation can be found at http://api.stackoverflow.com/1.1/usage/methods/tags
 
-  StackOverflow.get_tags
+  API::StackOverflow.get_tags
 
 == Get Tags Synonyms
 
 API documentation can be found at http://api.stackoverflow.com/1.1/usage/methods/tag-synonyms
 
-  StackOverflow.get_tags_synonyms
+  API::StackOverflow.get_tags_synonyms
 
 == Work in progress
 
