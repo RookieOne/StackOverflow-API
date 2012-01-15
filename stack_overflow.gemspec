@@ -4,7 +4,7 @@ require "stack_overflow/version"
 
 Gem::Specification.new do |s|
   s.name        = "stack_overflow"
-  s.version     = StackOverflow::VERSION
+  s.version     = API::StackOverflow::VERSION
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Jonathan Birkholz"]
   s.email       = ["rookieone@gmail.com"]
