@@ -1,5 +1,8 @@
 require 'httparty'
 require 'json'
+require 'question'
+require 'answer'
+
 module API
   module StackOverflow
     include HTTParty
@@ -34,13 +37,12 @@ module API
 
     def self.get_user_questions(user_id)
       result = get(@@URL + "users/#{user_id}/questions?key=#{@@API_KEY}")
-      result["questions"]
+      result["questions"].map{|q| Question.new(q) }
     end
-
 
     def self.get_user_answers(user_id)
       result = get(@@URL + "users/#{user_id}/answers?key=#{@@API_KEY}")
-      result["answers"]
+      result["answers"].map{|a| Answer.new(a) }
     end
 
     def self.get_user_tags(user_id)
