@@ -53,6 +53,14 @@ describe API::StackOverflow do
     it { @users.select{|u| u["display_name"] == "JB"}.should_not be_nil }
     it { @users.select{|u| u["display_name"] == "Ben Scheirman"}.should_not be_nil }
   end
+
+  describe "search_users" do
+    before(:each) do
+      @users = API::StackOverflow.search_user("rogeriopvl")
+    end
+    it { @users.should_not be_nil }
+    it { @users.select{|u| u["user_id"] == "28388"}.should_not be_nil }
+  end
   
   describe "get user tags" do
     before(:each) do
