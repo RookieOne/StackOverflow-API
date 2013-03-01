@@ -23,6 +23,11 @@ module API
       JSON.parse(gz.read)
     end
 
+    def self.search_user(user_name)
+      result = get(@@URL + "users?key=#{@@API_KEY}&filter=#{user_name}")
+      result["users"]
+    end
+
     def self.get_user(user_id)
       result = get(@@URL + "users/#{user_id}?key=#{@@API_KEY}")
       return nil if result["users"].nil?
