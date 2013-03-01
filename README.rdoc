@@ -14,7 +14,7 @@ Be sure to set the API Key.
 
 	API::StackOverflow.API_KEY = YOUR_KEY_GOES_HERE
 	
-You can get your key from StackOverflow by going here : http://stackapps.com/apps/register
+You can get your key from StackOverflow by going here : http://stackapps.com/users/login?returnurl=/apps/oauth/register
 
 == Get all Users
 
